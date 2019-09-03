@@ -1,3 +1,4 @@
+import { useDispatch, connect } from 'react-redux';
 export const incrementOne = () => {
   return {
     type: 'INCREMENT_ONE'

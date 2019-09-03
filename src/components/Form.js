@@ -22,7 +22,7 @@ class Welcome extends Component {
   }
 
   handleSubmit(e) {
-    useDispatch(updateCounter(this.state))
+    this.props.updater(this.state)
     alert(`one: ${this.state.one} two: ${this.state.two}`);
   }
 

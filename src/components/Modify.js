@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { useDispatch } from 'react-redux';
-import { incrementOne, decrementOne, incrementTwo, decrementTwo, updateCounter } from '../actions'
+import { incrementOne, decrementOne, incrementTwo, decrementTwo } from '../actions'
 
-function Modify() {
+function Modify(props) {
   const dispatch = useDispatch();
   return (
     <div className="Modify">
@@ -12,7 +12,7 @@ function Modify() {
       <button onClick={() => dispatch(decrementTwo())}>Subtrat From Count Two</button>
       <input type="number" name='one'/>
       <input type="number" name='two'/>
-      <button onClick={() => dispatch(updateCounter({one:10, two:55}))}>Submit</button>
+      <button>Submit</button>
     </div>
   );
 }

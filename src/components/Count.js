@@ -1,12 +1,17 @@
 import React, { Component } from "react";
 import { useSelector } from 'react-redux'
 
-function Count() {
+function Count(props) {
   const counter = useSelector(state => state.counter)
   return (
     <div className="Count">
-      {counter.one}
-      {counter.two}
+      Counter one: {counter.one}
+      <br/>
+      Counter two: {counter.two}
+      <br/>
+      State one: {props.one}
+      <br/>
+      State two: {props.two}
     </div>
   );
 }
